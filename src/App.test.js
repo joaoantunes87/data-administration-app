@@ -1,8 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-// import App from './App';
+import { shallow } from 'enzyme';
+import App from './App';
+
+jest.mock('d2-ui/lib/app-header/HeaderBar');
 
 it('renders without crashing', () => {
-  const div = document.createElement('div');
-  // ReactDOM.render(<App />, div);
+  shallow(<App />);
 });
